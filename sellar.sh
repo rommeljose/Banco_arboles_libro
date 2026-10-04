@@ -31,4 +31,5 @@ cp "$E"      "libro/sellos/ESTADO-$D.txt"
 cp "$E.ots"  "libro/sellos/ESTADO-$D.txt.ots"
 # índice para que la página sepa qué sellos hay sin preguntarle a nadie
 ls libro/sellos/ | grep -E '^ESTADO-.*\.txt$' | sort > libro/sellos/INDICE.txt
+ls libro | grep -E '^[0-9]{4}-[0-9]{2}\.tsv$' | sort > libro/INDICE.txt
 echo "✓ sellado → libro/sellos/ESTADO-$D.txt.ots"

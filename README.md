@@ -24,6 +24,7 @@ El programa sirve, por el momento, a la capa verde de la ciudad de Cumaná.
 | | |
 |---|---|
 | `libro/AAAA-MM.tsv` | los asientos de cada mes, en texto plano separado por tabuladores |
+| `libro/INDICE.txt` | la lista de archivos del libro |
 | `libro/sellos/` | el estado del libro en cada sello y su recibo `.ots` |
 | `libro/sellos/INDICE.txt` | la lista de sellos emitidos |
 | `verificar.sh` | recalcula la cadena entera; sólo necesita `sha256sum` |

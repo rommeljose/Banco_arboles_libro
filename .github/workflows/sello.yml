@@ -49,7 +49,11 @@ jobs:
     needs: actualizar
     runs-on: ubuntu-latest
     steps:
+      # La punta de la rama, no el commit que disparó la corrida: el trabajo
+      # anterior puede haber guardado sellos completados hace un momento.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
       - run: pip install --quiet opentimestamps-client
       - name: Cada libro debe terminar en salto de línea
         # si no, el próximo lote se pega encima del último asiento
@@ -65,5 +69,6 @@ jobs:
           git add -A libro
           git diff --cached --quiet && echo "sin cambios" || {
             git commit -m "Sello semanal $(date -u +%Y-%m-%d)"
+            git pull --rebase    # por si se publicó un lote mientras se sellaba
             git push
           }

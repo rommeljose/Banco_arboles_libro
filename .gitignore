@@ -1,0 +1,8 @@
+.DS_Store
+*.swp
+*.bak
+
+# Secretos — nunca dentro de un repositorio público
+*.key
+.env
+.env.*

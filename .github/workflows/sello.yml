@@ -1,0 +1,69 @@
+name: Sello
+
+# Dos trabajos con ritmos distintos, porque son cosas distintas:
+#
+#   SELLAR    (domingos) pide un sello nuevo del estado del libro.
+#   ACTUALIZAR (a diario) recoge de los calendarios el camino hasta el bloque
+#              de los sellos que Bitcoin ya confirmó.
+#
+# OJO: «ots upgrade» NO crea la prueba. La prueba existe en Bitcoin desde que
+# se minó el bloque. Lo único que hace es traerse el camino de Merkle desde el
+# calendario y guardarlo. Importa porque si los calendarios desaparecieran
+# antes de que alguien lo traiga, la prueba seguiría en la cadena pero ya no
+# habría cómo demostrar el camino hasta ella. Es un seguro, no la prueba.
+
+on:
+  schedule:
+    - cron: '0 4 * * 0'      # sellar: domingos 04:00 UTC
+    - cron: '20 5 * * *'     # actualizar: todos los días 05:20 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    name: Recoger de los calendarios lo que Bitcoin ya confirmó
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet opentimestamps-client
+      - name: ots upgrade
+        run: |
+          ots upgrade libro/sellos/*.ots || true
+          rm -f libro/sellos/*.ots.bak
+        continue-on-error: true
+      - name: Guardar si algo cambió
+        run: |
+          git config user.name  "robot-notario"
+          git config user.email "robot@banco-arboles.invalid"
+          git add -A libro
+          git diff --cached --quiet && echo "nada nuevo en los calendarios" || {
+            git commit -m "Sellos completados: Bitcoin confirmó $(date -u +%Y-%m-%d)"
+            git push
+          }
+
+  sellar:
+    name: Sellar el estado del libro
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 4 * * 0'
+    needs: actualizar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet opentimestamps-client
+      - name: Cada libro debe terminar en salto de línea
+        # si no, el próximo lote se pega encima del último asiento
+        run: |
+          for f in libro/*.tsv; do
+            [ -n "$(tail -c1 "$f")" ] && printf '\n' >> "$f" || true
+          done
+      - run: ./sellar.sh
+      - name: Guardar
+        run: |
+          git config user.name  "robot-notario"
+          git config user.email "robot@banco-arboles.invalid"
+          git add -A libro
+          git diff --cached --quiet && echo "sin cambios" || {
+            git commit -m "Sello semanal $(date -u +%Y-%m-%d)"
+            git push
+          }

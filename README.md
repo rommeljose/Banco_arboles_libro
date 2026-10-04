@@ -52,7 +52,7 @@ Responsables:
 
 - Lcdo. MSc. José Fariñas — biólogo, botánico
 - Lcdo. Rommel Contreras — físico
-- Dr. Kelvis Campos — médico cirujano
+- Dr. Kelvis Campos — médico cirujano y naturalista
 
 ---
 

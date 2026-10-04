@@ -1,4 +1,4 @@
 # Banco de Árboles · estado del libro
 # <archivo> sha256=<del archivo> asientos=<n> punta=<huella del último>
-libro/2026-10.tsv sha256=f48011be989310a204146f6ac13d529307624b38fdbc556b883d6d79bf120510 asientos=5 punta=9326e36088d61f19031f99b04509c85c7711d833e17dfd5184366ba4b1a3395c
-sellado_utc=2026-10-04T01:24:25Z
+libro/2026-10.tsv sha256=3543197795496b919718b45f9fd3d9ec89bca8e06017386fedaa440830e5bf31 asientos=13 punta=3dbfc0b45bd5ef006f05bffbcc81dbb3da95872d0f821db9b06f4a8da5e1d43f
+sellado_utc=2026-10-04T11:50:14Z

@@ -26,10 +26,18 @@ cat "$E"
 rm -f "$E.ots"
 ots stamp "$E"
 mkdir -p libro/sellos
-D=$(date -u +%Y-%m-%d)
-cp "$E"      "libro/sellos/ESTADO-$D.txt"
-cp "$E.ots"  "libro/sellos/ESTADO-$D.txt.ots"
+# Un sello ya puesto no se pisa nunca: puede que Bitcoin ya lo haya confirmado.
+# Si hoy ya hay uno, el nuevo lleva letra (b, c…).
+N="ESTADO-$(date -u +%Y-%m-%d)"
+for s in '' b c d e f g h i j; do
+  [ -e "libro/sellos/$N$s.txt" ] || break
+  s=lleno
+done
+[ "$s" = lleno ] && { echo "✗ ya hay diez sellos de hoy; no se pisa ninguno" >&2; exit 1; }
+N="$N$s"
+cp "$E"      "libro/sellos/$N.txt"
+cp "$E.ots"  "libro/sellos/$N.txt.ots"
 # índice para que la página sepa qué sellos hay sin preguntarle a nadie
-ls libro/sellos/ | grep -E '^ESTADO-.*\.txt$' | sort > libro/sellos/INDICE.txt
-ls libro | grep -E '^[0-9]{4}-[0-9]{2}\.tsv$' | sort > libro/INDICE.txt
-echo "✓ sellado → libro/sellos/ESTADO-$D.txt.ots"
+ls libro/sellos/ | grep -E '^ESTADO-.*\.txt$' | LC_ALL=C sort > libro/sellos/INDICE.txt
+ls libro | grep -E '^[0-9]{4}-[0-9]{2}\.tsv$' | LC_ALL=C sort > libro/INDICE.txt
+echo "✓ sellado → libro/sellos/$N.txt.ots"

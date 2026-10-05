@@ -54,6 +54,13 @@ Responsables:
 - Lcdo. Rommel Contreras — físico
 - Dr. Kelvis Campos — médico cirujano y naturista
 
+## Licencia
+
+Los programas, bajo [MIT](LICENSE). **El libro, la capa y las fotografías, bajo CC BY-SA
+4.0**: se pueden copiar, usar y rehacer, atribuyendo y compartiendo igual. Las condiciones,
+lo que aporta quien registra, qué pasa si en una foto sale una persona y por qué una
+miniatura no es una prueba, están en **[LICENCIA-DATOS.md](LICENCIA-DATOS.md)**.
+
 ---
 
 *El programa está en fase de ensayo: los primeros registros son de prueba.*

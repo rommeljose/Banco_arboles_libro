@@ -59,7 +59,12 @@ Responsables:
 Los programas, bajo [MIT](LICENSE). **El libro, la capa y las fotografías, bajo CC BY-SA
 4.0**: se pueden copiar, usar y rehacer, atribuyendo y compartiendo igual. Las condiciones,
 lo que aporta quien registra, qué pasa si en una foto sale una persona y por qué una
-miniatura no es una prueba, están en **[LICENCIA-DATOS.md](LICENCIA-DATOS.md)**.
+miniatura no es una prueba, están en **[LICENCIA-DATOS.md](LICENCIA-DATOS.md)**, en
+castellano y en inglés.
+
+*The software is under [MIT](LICENSE); **the ledger, the map layer and the photographs are
+under CC BY-SA 4.0**. The full terms are in [LICENCIA-DATOS.md](LICENCIA-DATOS.md), which
+carries an English translation.*
 
 ---
 

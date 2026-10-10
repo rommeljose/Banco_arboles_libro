@@ -25,6 +25,7 @@ jobs:
   actualizar:
     name: Recoger de los calendarios lo que Bitcoin ya confirmó
     runs-on: ubuntu-latest
+    timeout-minutes: 10   # corta una ejecución colgada
     steps:
       - uses: actions/checkout@v4
       - run: pip install --quiet opentimestamps-client
@@ -48,6 +49,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 4 * * 0'
     needs: actualizar
     runs-on: ubuntu-latest
+    timeout-minutes: 10   # corta una ejecución colgada
     steps:
       # La punta de la rama, no el commit que disparó la corrida: el trabajo
       # anterior puede haber guardado sellos completados hace un momento.

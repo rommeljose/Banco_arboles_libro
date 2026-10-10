@@ -21,6 +21,12 @@ on:
 permissions:
   contents: write
 
+# Los domingos los dos cron crean dos corridas aparte y, con el atraso de
+# GitHub, pueden caer juntas: una espera a la otra, ninguna se cancela.
+concurrency:
+  group: sello
+  cancel-in-progress: false
+
 jobs:
   actualizar:
     name: Recoger de los calendarios lo que Bitcoin ya confirmó
@@ -41,6 +47,7 @@ jobs:
           git add -A libro
           git diff --cached --quiet && echo "nada nuevo en los calendarios" || {
             git commit -m "Sellos completados: Bitcoin confirmó $(date -u +%Y-%m-%d)"
+            git pull --rebase    # por si se publicó un lote o un sello mientras tanto
             git push
           }
 

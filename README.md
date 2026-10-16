@@ -1,6 +1,29 @@
-# Banco de Árboles de Cumaná
+<p align="center">
+  <img src="img/emblema.svg" alt="Emblema del Banco de Árboles: dos curvas elípticas, una amarilla y una verde, entrelazadas alrededor de un apamate" width="180">
+</p>
 
-**Un registro público y permanente de los árboles de Cumaná**, Estado Sucre, Venezuela.
+<h1 align="center">Banco de Árboles de Cumaná</h1>
+
+<p align="center"><strong>Un registro público y permanente de los árboles de Cumaná</strong>, Estado Sucre, Venezuela.</p>
+
+## ¿Qué es el Banco de Árboles?
+
+**Para que Cumaná sepa qué árboles tiene, dónde están y cómo están, y para que esa
+constancia no se pueda borrar.** Un árbol registrado deja de ser invisible: si se tala, se
+enferma o se poda mal, queda la prueba de que existía y de cómo estaba.
+
+- **Qué:** un registro público de la capa verde de la ciudad, árbol por árbol, con sus
+  fotos, su lugar y su fecha.
+- **Para qué:** conocer el arbolado, cuidarlo, defenderlo y planificar dónde sembrar y qué
+  reponer. Los datos son de todos: vecinos, escuelas e instituciones pueden usarlos.
+- **Quiénes:** cualquier vecino registra con su teléfono; curadores y quienes saben de
+  botánica revisan; la Academia de GeoHistoria del Estado Sucre (AGHES) promueve el
+  programa.
+- **Por qué así:** el libro sólo crece y se sella en Bitcoin, para que nadie —tampoco
+  nosotros— pueda reescribirlo sin que se note.
+
+Queremos que la capa verde de Cumaná tenga memoria: saber qué árboles hay, dónde están y
+en qué estado, y poder demostrarlo hoy y dentro de muchos años.
 
 ## De qué se trata
 
@@ -19,6 +42,16 @@ queda con su nombre, su lugar y su fecha.
 libro y, mediante tecnología digital, queda anclada en la cadena de bloques de Bitcoin.
 Eso es lo que asegura la inmutabilidad de los registros.
 
+## Una prueba de existencia
+
+Lo que está en Bitcoin no es el libro: es **una huella del libro**, un número que cambia
+por completo si alguien le mueve una coma. A eso se le llama una **prueba de existencia**
+(en inglés, *proof of existence*).
+
+Es como el matasellos de una carta: no dice si lo escrito es cierto; dice que la carta ya
+existía ese día. La huella añade lo que el matasellos no puede: que tampoco se cambió
+después.
+
 ## Lo que el sistema garantiza
 
 - **El libro sólo crece.** Los registros no se pueden borrar ni reescribir. Si hay que
@@ -28,20 +61,31 @@ Eso es lo que asegura la inmutabilidad de los registros.
 - **Cualquiera puede comprobarlo.** No hace falta creernos ni pedir permiso: la página
   permite verificar que un registro está en el libro y que no ha cambiado.
 
-## Para qué
-
-Un árbol que consta, con fecha cierta, no puede desaparecer en silencio. Queremos que la
-capa verde de Cumaná tenga memoria: saber qué árboles hay, dónde están y en qué estado,
-y poder demostrarlo hoy y dentro de muchos años.
+Lo que no garantiza, y conviene decirlo: el sello no hace cierto un dato. Que la especie
+sea la correcta o que la medida esté bien tomada lo cuidan las fotos, la revisión de quienes
+saben de botánica y el vecino que va y mira.
 
 ## Cómo se usa
 
 Todo se hace desde la página:
 
-**https://rommeljose.github.io/Banco_arboles_CA/**
+**https://arbolescumana.sigeos.org/**
 
 Ahí puedes registrar un árbol, ver en el mapa lo que ya está registrado y verificar el
-libro por tu cuenta.
+libro por tu cuenta. Para empezar, toca «Registrar», párate frente a un árbol y sigue los
+pasos.
+
+## El emblema
+
+Dos curvas que cuidan un árbol. Las líneas no están dibujadas a mano: son la curva elíptica
+**y² + y = x³ − x** —la que los matemáticos llaman
+[37a](https://www.lmfdb.org/EllipticCurve/Q/37/a/1)— y su reflejo, entrelazadas alrededor de
+un **apamate** (*Tabebuia rosea*), que florece en rosado por toda Cumaná.
+
+Se eligió una curva elíptica porque son las que dan su seguridad a Bitcoin, donde cada
+semana viaja la huella de este libro: la matemática que protege a Bitcoin, cuidando el
+registro de los árboles. **El amarillo es por el sol que da la vida; el verde, por la
+floresta.**
 
 ## Créditos
 

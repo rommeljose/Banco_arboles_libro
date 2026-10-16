@@ -1,10 +1,13 @@
 # Licencia de los datos y de las fotos · Data and photo licence
 
-El archivo `LICENSE` de este repositorio cubre **los programas**. Este cubre **lo que el
-programa registra**: el libro, la capa y las fotografías.
+El archivo `LICENSE` de este repositorio cubre **los programas de este repositorio** (los
+que sellan y verifican el libro). Este cubre **lo que la aplicación registra**: el libro, la
+capa y las fotografías. La aplicación misma no está aquí ni se licencia aquí.
 
-*The `LICENSE` file in this repository covers **the software**. This one covers **what the
-software records**: the ledger, the map layer and the photographs.*
+*The `LICENSE` file in this repository covers **the programs in this repository** (the
+ones that seal and verify the ledger). This one covers **what the application records**: the
+ledger, the map layer and the photographs. The application itself is not here and is not
+licensed here.*
 
 > **Castellano primero.** Esta licencia se redactó en castellano y el texto en inglés es una
 > traducción de cortesía. Si alguna vez discrepan, **manda el castellano**.

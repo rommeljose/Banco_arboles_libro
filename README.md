@@ -100,14 +100,19 @@ Responsables:
 
 ## Licencia
 
-Los programas, bajo [MIT](LICENSE). **El libro, la capa y las fotografías, bajo CC BY-SA
-4.0**: se pueden copiar, usar y rehacer, atribuyendo y compartiendo igual. Las condiciones,
+Los programas **de este repositorio** —los que sellan y verifican el libro, y la Action
+del sello— bajo [MIT](LICENSE): comprobar tiene que ser libre. **La aplicación del Banco de
+Árboles no está en este repositorio ni se licencia aquí**; sus derechos están reservados.
+
+**El libro, la capa y las fotografías, bajo CC BY-SA 4.0**: se pueden copiar, usar y rehacer, atribuyendo y compartiendo igual. Las condiciones,
 lo que aporta quien registra, qué pasa si en una foto sale una persona y por qué una
 miniatura no es una prueba, están en **[LICENCIA-DATOS.md](LICENCIA-DATOS.md)**, en
 castellano y en inglés.
 
-*The software is under [MIT](LICENSE); **the ledger, the map layer and the photographs are
-under CC BY-SA 4.0**. The full terms are in [LICENCIA-DATOS.md](LICENCIA-DATOS.md), which
+*The programs **in this repository** —the ones that seal and verify the ledger, and the
+sealing Action— are under [MIT](LICENSE). **The Banco de Árboles application is not in this
+repository and is not licensed here**; all rights reserved. **The ledger, the map layer and
+the photographs are under CC BY-SA 4.0**. The full terms are in [LICENCIA-DATOS.md](LICENCIA-DATOS.md), which
 carries an English translation.*
 
 ---
